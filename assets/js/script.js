@@ -60,7 +60,28 @@ const gradosconvert = () => {
 //	EQUIVALENTE DE DIAS EN ANOS Y MESES
 //***********************************************
 
+const daystoyear = () => {
+  alert("Ingresa una cantidad de días y los convertiremos a años, meses y semanas.");
 
+  let days = parseInt(prompt("Ingresa un numero de dias", ""));
+
+  if (days > 0) {
+
+    //Calculo de años
+    let years = Math.floor(days / 365);
+    //Calcular el sobrante de years
+    let dayssob = Math.floor(days % 365);
+    //Calcular el sobrante de dias en semanas
+    let weeksob = Math.floor(dayssob / 7);
+
+    let prueba = Math.floor(dayssob % 7);
+    alert(`years ${years}, ${weeksob}, ${prueba}`);
+
+  } else {
+    alert("El numero de dias debe ser mayor a 0");
+  }
+
+}
 
 //*****************************************
 //	SUMA Y PROMEDIO DE 5 VALORES
