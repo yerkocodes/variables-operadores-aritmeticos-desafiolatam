@@ -1,0 +1,59 @@
+:root {
+  --purple: #711c91;
+  --pink: #ea00d9;
+  --cyan: #0abdc6;
+  --blue: #133e7c;
+  --dark-blue: #050f20;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+  background-color: white;
+  color: black;
+  font-size: 1.6rem;
+}
+
+/* Zoom */
+.zoom {
+  transition: transform.2s;
+}
+
+.zoom:hover {
+  transform: scale(1.1); /* 1 = 100% */
+}
+/* Zoom-End */
+
+main {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (min-width:768px) {
+  main {
+    height: 100vh;
+  }
+}
+
+.profile-img {
+  border-radius: 50%;
+  width: 20%;
+}
+
+.profile-title {
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-weight: bold;
+}
+
+.wrapper {
+  background-color: #efefef;  
+}
