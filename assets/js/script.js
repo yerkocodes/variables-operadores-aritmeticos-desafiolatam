@@ -26,7 +26,7 @@ const operadores = () => {
     alert(`Los resultados para los valores ${num1} y ${num2} son: \n
     ${num1} + ${num2} = ${sum} \n
     ${num1} - ${num2} = ${rest} \n
-    ${num1} / ${num2} = ${div} \n
+    ${num1} / ${num2} = ${div.toFixed(2)} \n
     ${num1} * ${num2} = ${mult} \n
     ${num1} % ${num2} = ${mod}`);
 
@@ -77,8 +77,10 @@ const daystoyear = () => {
     //Calcular el sobrante de dias en semanas.
     let weeksob = Math.floor(dayssob / 7);
     //Calcular el sobrante de semanas.
-    let prueba = Math.floor(dayssob % 7);
-    alert(`years ${years}, ${weeksob}, ${prueba}`);
+    let daysrest = Math.floor(dayssob % 7);
+
+    //Imprimimos en pantalla el resultado objetivo
+    alert(`${days} es equivalente a ${years} años, ${weeksob} semanas y ${daysrest} dias.`);
 
   //Si el valor ingresado por el usuario no es mayor a 0 ejecutar un mensaje.
   } else {
